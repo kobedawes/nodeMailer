@@ -1,14 +1,16 @@
 import nodemailer from "nodemailer";
 
+const email = process.env.EMAIL;
+const pass = process.env.EMAIL_PASS;
 
   // create reusable transporter object using the default SMTP transport
 export const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
     auth: {
-        user: 'tiana.hagenes@ethereal.email',
-        pass: '55bZNzkuBEz7wqy7ND'
-    }
+        user: email,
+        pass: pass,
+    },
 });
 
 export const mailOptions= {

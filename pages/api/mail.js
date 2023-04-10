@@ -10,7 +10,7 @@ export default async function mailHandler(req, res) {
                     to: student.email,
                     subject: "Rocket Roster Sign up", // Subject line
                     text: `Hello ${student.fullName}, \n Please sign up for Rocket Rosters with your unique code.`,  // plain text body
-                    html: "<h1>Rocket Roster Sign up</h1>",
+                    html: "<h1>Rocket Roster Sign up</h1><p></p>",
                 })
             }
             return res.status(200).json({success: true});

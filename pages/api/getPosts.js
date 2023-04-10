@@ -8,7 +8,7 @@ export default async (req, res) => {
     const posts = await db.collection("users").find({}).limit(20).toArray();
 
     res.json(posts);
-    console.log(posts);
+    //console.log(posts);
   } catch (e) {
     console.error(e);
     throw new Error(e).message;
